@@ -7,10 +7,12 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Brand & Description */}
         <div>
-          <h2 className="text-2xl font-bold text-blue-600 mb-2">DigitUX</h2>
+          <div className="text-2xl font-bold text-blue-600">
+            MC <span className="text-black">BĂNG TUYẾT</span>
+          </div>
           <p className="text-gray-600 text-sm">
-            DigitUx is a Digital agency that create User centred Product that
-            help her client to evolve
+            MC Băng Tuyết là một MC chuyên nghiệp tại Học viện kỹ năng mềm ST
+            Lighthouse
           </p>
         </div>
 

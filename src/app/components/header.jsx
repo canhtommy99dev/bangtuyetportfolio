@@ -21,7 +21,7 @@ export default function Header() {
     <header className="w-full border-b bg-white">
       <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-3">
         <div className="text-2xl font-bold text-blue-600">
-          Digit<span className="text-black">UX</span>
+          MC <span className="text-black">BĂNG TUYẾT</span>
         </div>
 
         {/* Desktop Nav */}
