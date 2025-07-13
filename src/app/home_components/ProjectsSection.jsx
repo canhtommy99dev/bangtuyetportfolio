@@ -37,7 +37,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <section className="bg-white text-black py-20 px-6 lg:px-24 relative overflow-hidden max-w-7xl mx-auto">
+    <section className="bg-white dark:bg-gray-900 text-black dark:text-white py-20 px-6 lg:px-24 relative overflow-hidden max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold max-w-3xl leading-snug mb-10">
           The work we did that made our Client happy and satisfied
@@ -67,7 +67,7 @@ export default function ProjectsSection() {
         <div className="mt-10 text-center">
           <Button
             variant="outline"
-            className="text-black border-white hover:bg-white hover:text-black"
+            className="text-black dark:text-white border-white dark:border-gray-600 hover:bg-white dark:hover:bg-gray-800 hover:text-black dark:hover:text-white"
           >
             Explore More Projects <ArrowRight className="ml-2 h-4 w-4" />
           </Button>

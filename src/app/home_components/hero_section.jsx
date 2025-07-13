@@ -6,6 +6,7 @@ import { ArrowRight, MessageSquare } from "lucide-react";
 import BlurText from "../../block/TextAnimations/BlurText/BlurText";
 import TextPressure from "../../block/TextAnimations/TextPressure/TextPressure";
 import TiltedCard from "../../block/Components/TiltedCard/TiltedCard";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
@@ -13,7 +14,7 @@ const handleAnimationComplete = () => {
 
 export default function HeroSection() {
   return (
-    <section className="bg-white text-white py-20 px-6 lg:px-24 relative overflow-hidden max-w-7xl mx-auto">
+    <section className="bg-white dark:bg-gray-900 text-white py-20 px-6 lg:px-24 relative overflow-hidden max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 items-center gap-12 justify-center">
         {/* Text Content */}
         <div>
@@ -27,8 +28,8 @@ export default function HeroSection() {
                 width={true}
                 weight={true}
                 italic={true}
-                textColor="#000000"
-                strokeColor="#ffffff"
+                textColor="var(--text-color, #000000)"
+                strokeColor="var(--stroke-color, #ff0000)"
                 minFontSize={34}
               />
             </div>
@@ -42,14 +43,14 @@ export default function HeroSection() {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="text-2xl mb-8 text-black"
+            className="text-2xl mb-8 text-black dark:text-white"
           />
 
-          <div className="flex items-center gap-4 mt-8">
-            <Button className="bg-blue-500 text-white">
-              <MessageSquare className="mr-2 h-4 w-4" />
-              Let’s Talk
-            </Button>
+          <div className="flex items-center gap-4 mt-8 text-black dark:text-white">
+            <InteractiveHoverButton
+              text="Let's Talk"
+              className="bg-blue-500 text-white"
+            />
           </div>
         </div>
 

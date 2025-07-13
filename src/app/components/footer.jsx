@@ -3,14 +3,14 @@ import { Facebook, Instagram, Twitter, Dribbble } from "lucide-react"; // Lucide
 
 export default function Footer() {
   return (
-    <footer className="bg-white border-t border-gray-200">
+    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Brand & Description */}
         <div>
           <div className="text-2xl font-bold text-blue-600">
-            MC <span className="text-black">BĂNG TUYẾT</span>
+            MC <span className="text-black dark:text-white">BĂNG TUYẾT</span>
           </div>
-          <p className="text-gray-600 text-sm">
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
             MC Băng Tuyết là một MC chuyên nghiệp tại Học viện kỹ năng mềm ST
             Lighthouse
           </p>
@@ -18,8 +18,10 @@ export default function Footer() {
 
         {/* About */}
         <div className="hidden lg:block">
-          <h3 className="font-semibold mb-3">About</h3>
-          <ul className="space-y-2 text-gray-700 text-sm">
+          <h3 className="font-semibold mb-3 text-gray-900 dark:text-white">
+            About
+          </h3>
+          <ul className="space-y-2 text-gray-700 dark:text-gray-300 text-sm">
             <li>
               <a href="#" className="hover:underline">
                 About Us
@@ -50,8 +52,10 @@ export default function Footer() {
 
         {/* Follow Us (hidden on small screens) */}
         <div className="hidden lg:block">
-          <h3 className="font-semibold mb-3">Follow Us</h3>
-          <ul className="space-y-3 text-gray-700 text-sm">
+          <h3 className="font-semibold mb-3 text-gray-900 dark:text-white">
+            Follow Us
+          </h3>
+          <ul className="space-y-3 text-gray-700 dark:text-gray-300 text-sm">
             <li className="flex items-center gap-2">
               <Facebook size={18} className="text-blue-600" />
               <a href="#" className="hover:underline">
@@ -81,16 +85,20 @@ export default function Footer() {
 
         {/* Contact */}
         <div>
-          <h3 className="font-semibold mb-3">Get In touch with Us</h3>
-          <p className="text-gray-700 text-sm mb-1">
+          <h3 className="font-semibold mb-3 text-gray-900 dark:text-white">
+            Get In touch with Us
+          </h3>
+          <p className="text-gray-700 dark:text-gray-300 text-sm mb-1">
             Need Answers? Need help ?
           </p>
-          <p className="text-gray-700 text-sm mb-3">Just email us</p>
+          <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
+            Just email us
+          </p>
           <form className="flex items-center gap-2">
             <Input placeholder="Your email" className="rounded-md" />
             <button
               type="submit"
-              className="inline-flex items-center p-2 rounded-md border border-blue-400 hover:bg-blue-50 transition text-blue-500"
+              className="inline-flex items-center p-2 rounded-md border border-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition text-blue-500"
             >
               <svg
                 className="w-5 h-5"
@@ -108,7 +116,7 @@ export default function Footer() {
 
       <div className="bg-[#11112a] py-4 mt-2">
         <div className="text-center text-white text-sm font-semibold">
-          Designed By Hmimi Chioukh 2022
+          Designed By Canhtommy99dev
         </div>
       </div>
     </footer>

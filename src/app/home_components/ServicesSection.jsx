@@ -37,7 +37,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-white text-black py-20 px-6 lg:px-24 max-w-7xl mx-auto">
+    <section className="bg-white dark:bg-gray-900 text-black dark:text-white py-20 px-6 lg:px-24 max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold max-w-3xl leading-snug">
           We offer a variety of services to help you grow and build your brand
@@ -48,15 +48,15 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gray-100 p-6 rounded-lg shadow-sm border border-gray-700"
+              className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-sm border border-gray-700 dark:border-gray-600"
             >
               <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-black-300 text-sm mb-4">
+              <p className="text-black-300 dark:text-gray-300 text-sm mb-4">
                 {service.description}
               </p>
               <Button
                 variant="outline"
-                className="text-black border-white hover:bg-blue-500 hover:text-white transition"
+                className="text-black dark:text-white border-white dark:border-gray-600 hover:bg-blue-500 hover:text-white transition"
               >
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4" />

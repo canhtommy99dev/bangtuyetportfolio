@@ -1,10 +1,10 @@
 "use client";
 
-import React from "react";
-import { usePathname } from "next/navigation"; // 1. Import usePathname
-import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { useState } from "react";
+import { Dialog, DialogPanel } from "@headlessui/react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { usePathname } from "next/navigation";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const NAV_ITEMS = [
   { label: "Home", href: "/" },
@@ -14,79 +14,114 @@ const NAV_ITEMS = [
   { label: "Contact Us", href: "/contact" },
 ];
 
-export default function Header() {
-  const pathname = usePathname(); // 2. Get current path
+export default function Example() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
-    <header className="w-full border-b bg-white">
-      <div className="flex items-center justify-between max-w-7xl mx-auto px-4 py-3">
-        <div className="text-2xl font-bold text-blue-600">
-          MC <span className="text-black">BĂNG TUYẾT</span>
+    <header className="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md border-b border-gray-200 dark:border-gray-700">
+      <nav
+        aria-label="Global"
+        className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
+      >
+        <div className="flex lg:flex-1">
+          <a href="/" className="-m-1.5 p-1.5">
+            <div className="text-2xl font-bold text-blue-600">
+              MC <span className="text-black dark:text-white">BĂNG TUYẾT</span>
+            </div>
+          </a>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen(true)}
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 dark:text-gray-300"
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon aria-hidden="true" className="size-6" />
+          </button>
         </div>
 
-        {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        {/* Desktop Menu */}
+        <div className="hidden lg:flex lg:gap-x-12">
           {NAV_ITEMS.map((item) => {
             const isActive = pathname === item.href;
             return (
               <a
                 key={item.label}
                 href={item.href}
-                className={
+                className={`text-sm/6 font-semibold ${
                   isActive
-                    ? "font-semibold text-black border-b-2 border-blue-600 pb-1"
-                    : "text-gray-500 hover:text-black transition"
-                }
+                    ? "text-blue-600"
+                    : "text-gray-900 dark:text-gray-100"
+                } hover:text-blue-500 transition`}
               >
                 {item.label}
               </a>
             );
           })}
-        </nav>
-
-        <div className="hidden md:block">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold shadow">
-            Get a Quote
-          </Button>
         </div>
+        <div className="pl-10 hidden lg:block">
+          <ThemeToggle />
+        </div>
+      </nav>
 
-        {/* Mobile Menu */}
-        <div className="md:hidden">
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left" className="pt-8 w-3/4">
-              <div className="text-2xl font-bold text-blue-600 mb-6">
-                Digit<span className="text-black">UX</span>
+      {/* Mobile Menu */}
+      <Dialog
+        open={mobileMenuOpen}
+        onClose={setMobileMenuOpen}
+        className="lg:hidden"
+      >
+        <div className="fixed inset-0 z-50" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white dark:bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:ring-gray-700/10">
+          <div className="flex items-center justify-between">
+            <a href="/" className="-m-1.5 p-1.5">
+              <div className="text-2xl font-bold text-blue-600">
+                MC{" "}
+                <span className="text-black dark:text-white">BĂNG TUYẾT</span>
               </div>
-              <nav className="flex flex-col gap-6">
+            </a>
+            <button
+              type="button"
+              onClick={() => setMobileMenuOpen(false)}
+              className="-m-2.5 rounded-md p-2.5 text-gray-700 dark:text-gray-300"
+            >
+              <span className="sr-only">Close menu</span>
+              <XMarkIcon aria-hidden="true" className="size-6" />
+            </button>
+          </div>
+
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                <a
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 dark:text-gray-100 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+                  Menu
+                </a>
+                <ThemeToggle />
                 {NAV_ITEMS.map((item) => {
                   const isActive = pathname === item.href;
                   return (
                     <a
                       key={item.label}
                       href={item.href}
-                      className={
+                      className={`block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold ${
                         isActive
-                          ? "font-semibold text-black border-b-2 border-blue-600 pb-1 text-lg"
-                          : "text-gray-600 hover:text-black transition text-lg"
-                      }
+                          ? "text-blue-600"
+                          : "text-gray-900 dark:text-gray-100"
+                      } hover:bg-gray-50 dark:hover:bg-gray-800`}
                     >
                       {item.label}
                     </a>
                   );
                 })}
-              </nav>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white w-full mt-8">
-                Get a Quote
-              </Button>
-            </SheetContent>
-          </Sheet>
-        </div>
-      </div>
+              </div>
+            </div>
+          </div>
+        </DialogPanel>
+      </Dialog>
     </header>
   );
 }
