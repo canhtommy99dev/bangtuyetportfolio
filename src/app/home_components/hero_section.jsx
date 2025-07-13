@@ -14,7 +14,7 @@ const handleAnimationComplete = () => {
 
 export default function HeroSection() {
   return (
-    <section className="bg-white dark:bg-gray-900 text-white py-20 px-6 lg:px-24 relative overflow-hidden max-w-7xl mx-auto">
+    <section className="bg-white dark:bg-black text-white py-20 px-6 lg:px-24 relative overflow-hidden max-w-7xl mx-auto">
       <div className="grid md:grid-cols-2 items-center gap-12 justify-center">
         {/* Text Content */}
         <div>

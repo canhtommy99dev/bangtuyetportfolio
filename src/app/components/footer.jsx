@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter, Dribbble } from "lucide-react"; // Lucide
 
 export default function Footer() {
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+    <footer className="bg-white dark:bg-black border-t border-gray-200 dark:border-gray-700">
       <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {/* Brand & Description */}
         <div>

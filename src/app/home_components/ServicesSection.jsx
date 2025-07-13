@@ -37,7 +37,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="bg-white dark:bg-gray-900 text-black dark:text-white py-20 px-6 lg:px-24 max-w-7xl mx-auto">
+    <section className="bg-white dark:bg-black text-black dark:text-white py-20 px-6 lg:px-24 max-w-7xl mx-auto">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold max-w-3xl leading-snug">
           We offer a variety of services to help you grow and build your brand
