@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 💖 Web UI Project – Giao Diện Viết Từ Cảm Xúc
 
-## Getting Started
+> "Mỗi dòng code viết ra là một chút nhớ thương. Mỗi thành phần giao diện là một chút rung động." – *Cảnh Dev*
 
-First, run the development server:
+## 👋 Giới thiệu
+
+Xin chào mọi người, mình là **Cảnh Dev**!
+
+Đây là project giao diện web đơn giản, được mình tự phát triển dựa trên một bản thiết kế mà mình rất thích trên Figma. Nhưng không chỉ dừng lại ở việc thực hành code, đây còn là dự án mình dành tặng cho một người đặc biệt – **crush của mình** 💘.
+
+Mình sử dụng những kiến thức đã học cùng một chút cảm xúc chân thành để tạo nên UI này. Hy vọng khi bạn xem qua, bạn sẽ cảm nhận được sự chỉn chu và cảm hứng bên trong nó.
+
+## 🎨 Demo & Giao diện
+
+> *(Chèn hình ảnh minh hoạ, hoặc link demo nếu có)*  
+Ví dụ: [Xem demo tại đây](https://your-web-demo-link.vercel.app)
+
+## 🔧 Công nghệ sử dụng
+
+| Tools          | Technical           |
+|----------------|---------------------|
+| Ngôn ngữ       | ReactJS NextJS, CSS, JavaScript |
+| CSS Framework  | TailwindCSS *(nếu có)* |
+| UI Design      | [Figma](https://figma.com) |
+
+> Tùy vào project của bạn là thuần HTML hay dùng React/Next.js/Flutter Web,... bạn có thể cập nhật phần này tương ứng.
+
+## 📁 Cấu trúc thư mục
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+web-crush-ui/
+│
+├── index.html          # File HTML chính
+├── style.css           # CSS tùy chỉnh (hoặc dùng Tailwind)
+├── /assets             # Hình ảnh, biểu tượng,...
+├── /scripts            # JavaScript (nếu có tương tác)
+└── README.md           # Chính là file bạn đang đọc 😎
