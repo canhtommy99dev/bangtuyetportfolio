@@ -10,10 +10,6 @@ Xin chào mọi người, mình là **Cảnh Dev**!
 
 Mình sử dụng những kiến thức đã học cùng một chút cảm xúc chân thành để tạo nên UI này. Hy vọng khi bạn xem qua, bạn sẽ cảm nhận được sự chỉn chu và cảm hứng bên trong nó.
 
-## 🎨 Demo & Giao diện
-
-Dưới đây là một số hình ảnh minh hoạ cho giao diện của dự án:
-
 <p align="center">
   <img src="./IMG_2463.JPG" alt="Giao diện 1" width="350" style="margin-right: 16px;"/>
   <img src="./518363357_3946457975606408_258627561133605997_n.jpg" alt="Giao diện 2" width="350"/>
